@@ -1,6 +1,13 @@
 # Introduction
 ## Data Cleaning After Web Scraping – Machine Learning Category
 
+# 📢 Disclaimer
+This repository contains data that was obtained through web scraping from a publicly accessible website. The purpose of this project is purely educational and non-commercial. It is intended to explore data analysis, visualization, and machine learning techniques for academic learning and personal development.
+
+We do not claim ownership of any content scraped from the website, and no data has been used for redistribution, resale, or to infringe on intellectual property rights. All efforts have been made to ensure ethical use of publicly available information.
+
+If you are a representative of the original website and have any concerns, please feel free to contact me so the content can be reviewed or removed accordingly.
+
 ### 📌 This document summarizes the cleaning process applied to data scraped from web's results *Machine Learning* gigs. <br> The focus is on solving structural CSV issues caused by embedded commas in gig titles.
 
 ---
@@ -63,13 +70,3 @@ Expected fields for each gig:
 
 # ✅ Outcome
 ## This process effectively recovered clean, structured data from corrupted CSVs — a common real-world <br>  challenge in web scraping and data analysis enviroments. <br> The structural reverse-engineering logic proved accurate, robust, and reusable solutions.
-
-<br>
-
-
-# 📢 Disclaimer
-This repository contains data that was obtained through web scraping from a publicly accessible website. The purpose of this project is purely educational and non-commercial. It is intended to explore data analysis, visualization, and machine learning techniques for academic learning and personal development.
-
-We do not claim ownership of any content scraped from the website, and no data has been used for redistribution, resale, or to infringe on intellectual property rights. All efforts have been made to ensure ethical use of publicly available information.
-
-If you are a representative of the original website and have any concerns, please feel free to contact me so the content can be reviewed or removed accordingly.
