@@ -1,5 +1,5 @@
 # Introduction
-## Data Cleaning After Web Scraping – Machine Learning Category
+## Data Cleaning After Web Scraping – Machine Learning & Data Analytics Category
 
 # 📢 Disclaimer
 This repository contains data that was obtained through web scraping from a publicly accessible website. The purpose of this project is purely educational and non-commercial. It is intended to explore data analysis, visualization, and machine learning techniques for academic learning and personal development.
