@@ -7,12 +7,10 @@ def merge_titles_and_data(titles_file: str, data_file: str, output_file: str) ->
         titles_reader = csv.reader(f_titles)
         data_reader = csv.reader(f_data)
 
-        # Leer y descartar cabecera de títulos si la hay
         title_header = next(titles_reader)
         data_header = next(data_reader)
 
         if title_header[0].strip().lower() != "title":
-            # Si no hay cabecera, se consideran todos como datos
             titles_reader = csv.reader(open(titles_file, 'r', encoding='utf-8'))
             titles = list(titles_reader)
         else:
@@ -20,13 +18,12 @@ def merge_titles_and_data(titles_file: str, data_file: str, output_file: str) ->
 
         data = list(data_reader)
 
-        # Validar longitud
         if len(titles) != len(data):
-            print(f"❌ Los archivos no tienen la misma cantidad de filas: {len(titles)} títulos vs {len(data)} datos.")
+            print(f"❌ Row count doesn't match: {len(titles)} titles vs {len(data)} data.")
             return
 
         merged = []
-        merged.append(["title"] + data_header)  # Cabecera final
+        merged.append(["title"] + data_header) 
 
         for title_row, data_row in zip(titles, data):
             merged.append(title_row + data_row)
@@ -35,5 +32,5 @@ def merge_titles_and_data(titles_file: str, data_file: str, output_file: str) ->
         writer = csv.writer(f_out)
         writer.writerows(merged)
 
-    print(f"✅ Archivo fusionado guardado como {output_file} con {len(merged)-1} registros.")
+    print(f"✅ Merged file save as {output_file} with {len(merged)-1} regs.")
 merge_titles_and_data("titles-ML-gigs.csv", "no_titles_ML-gigs.csv", "fixed_ML-gigs.csv")

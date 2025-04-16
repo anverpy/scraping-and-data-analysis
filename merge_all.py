@@ -7,14 +7,13 @@ def join_parts(part1_file: str, part2_file: str, output_file: str) -> None:
         reader1 = list(csv.reader(f1))
         reader2 = list(csv.reader(f2))
 
-        # Asegurarse que ambas partes tengan la misma estructura de cabecera
         header1 = reader1[0]
         header2 = reader2[0]
 
         if header1 != header2:
-            print("❌ Las cabeceras de los archivos no coinciden.")
-            print("Parte 1:", header1)
-            print("Parte 2:", header2)
+            print("❌ Headers don't match.")
+            print("P1:", header1)
+            print("P2:", header2)
             return
 
         merged = [header1] + reader1[1:] + reader2[1:]
@@ -23,6 +22,6 @@ def join_parts(part1_file: str, part2_file: str, output_file: str) -> None:
         writer = csv.writer(fout)
         writer.writerows(merged)
 
-    print(f"✅ Archivos combinados en {output_file} con {len(merged)-1} registros.")
-join_parts("da-p1.csv", "da-p2.csv", "merged-final.csv")
+    print(f"✅ Merged files in {output_file} with {len(merged)-1} regs.")
+join_parts("da-p1.csv", "da-p2.csv", "DA-gigs.csv")
 

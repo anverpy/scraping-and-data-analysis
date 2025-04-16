@@ -1,5 +1,5 @@
 # Introduction
-## 🧹 Data Cleaning After Web Scraping – Machine Learning Category
+## Data Cleaning After Web Scraping – Machine Learning Category
 
 ### 📌 This document summarizes the cleaning process applied to data scraped from web's results *Machine Learning* gigs. <br> The focus is on solving structural CSV issues caused by embedded commas in gig titles.
 
@@ -15,41 +15,49 @@ Expected fields for each gig:
 - `seller_level`
 - `video_consultation`
 
+<br><br>
 ---
+# 🧹 1. Data Cleaning
 
-# ⚠️ 1. The Problem
-## Some gig titles included commas without proper quoting, resulting in rows with more than 7 columns. Example:
+- ## 1.1 Some gig titles included commas without proper quoting, resulting in rows with more than 7 columns. Example:
 
 ```csv
  I will create Machine Learning, Deep Learning, and NLP,Andrew Veasman,4.9,152,"1499,90","Level 2",True
 ```
 
 ## If quotes aren't respected, this is parsed as `>7` columns, breaking the CSV structure.
-<br>
+
+
+- ## 1.2 There are blank spaces in the ratings, reviews and level sections because there is more gig data than sellers, and sellers who are not located at a certain level yet.
+## What does this mean?
+### Gigs get ratings and reviews based on the gig, not the seller.<br>Some sellers have two or more gigs published (we'll see this later in the visualization), so there are gigs that have no ratings <br>or reviews. (A clear example is Johannes M.)
+<br><br>
+---
+
 
 # 🛠️ 2. Solution Strategy
 ## A reverse parsing approach was implemented:
 ### 1. For each row, take the last 6 elements (known fixed fields).
 ### 2. Consider everything before them as the actual `title`.
-### 3. Reassemble a row with exactly 7 columns.
-### 4. Optionally, remove internal quotes or replace commas in `title` for analysis.
+### 3. Fill Gaps in rating/reviews/seller_level with unranked/unreviwed/unleveled
 
-## This method works regardless of how many commas the `title` includes.
+
 <br>
 
 # 🔧 3. Script Summary
 
 ### - **`title_extractor.py`**: Extracts just the title column from malformed rows.
 ### - **`rid_bad_titles.py`**: Keeps only the last 6 fields, discarding corrupted titles.
-### At this point i erase all "," in Excel using `CTRL + B` but you can improve it by adding the function in any of these scripts.
+### - At this point i erase all "," in Excel using `CTRL + B` but you can improve it by adding the function in any of these scripts.
 ### - **`merge_titles_untitleds.py`**: Merges the cleaned titles back with the corrected data.
 ### - **`merge_all.py`**: Concatenates two complete CSVs from separate scraping sessions cases. Be notice the csvs must to have the same headers names.
+### - **`fill_gaps.py`**: Gaps in rating/reviews/seller_level filled with unranked/unreviwed/unleveled.
 ## Once made the data cleaning, we move forward to the next step.
 
 <br>
 
 # 📊 4. Visualitazion
-### - **`.py`**: Notes
+## In the repository you have both .ipynb files with code to understand the generation of graphs.
 
 # ✅ Outcome
-### This process effectively recovered clean, structured data from corrupted CSVs — a common real-world <br>  challenge in web scraping and data analysis enviroments. <br> The structural reverse-engineering logic proved accurate, robust, and reusable solutions.
+## This process effectively recovered clean, structured data from corrupted CSVs — a common real-world <br>  challenge in web scraping and data analysis enviroments. <br> The structural reverse-engineering logic proved accurate, robust, and reusable solutions.

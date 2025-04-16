@@ -12,16 +12,15 @@ def extract_titles_only(filepath: str, output_filename: str) -> None:
                 raw_title = ','.join(title_parts).strip()
                 titles.append([raw_title])
             else:
-                print(f"⚠️ Línea {i+1} con menos de 7 columnas: {row}")
+                print(f"⚠️ Line {i+1} <7 {row}")
             
             if i % 1000 == 0:
-                print(f"Procesadas {i} líneas...")
+                print(f"Processed {i} lines...")
 
     df_titles = pd.DataFrame(titles, columns=['title'])
     df_titles.to_csv(output_filename, index=False)
-    print(f"✅ Archivo guardado como {output_filename} con {len(titles)} títulos extraídos.")
+    print(f"✅ Saved as {output_filename} with {len(titles)} extracted titles.")
 
-# Ejecutar desde el mismo directorio
 extract_titles_only("ML-gigs.csv", "titles-ML-gigs.csv")
 
 
