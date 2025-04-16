@@ -59,5 +59,17 @@ Expected fields for each gig:
 # 📊 4. Visualitazion
 ## In the repository you have both .ipynb files with code to understand the generation of graphs.
 
+<br>
+
 # ✅ Outcome
 ## This process effectively recovered clean, structured data from corrupted CSVs — a common real-world <br>  challenge in web scraping and data analysis enviroments. <br> The structural reverse-engineering logic proved accurate, robust, and reusable solutions.
+
+<br>
+
+
+# 📢 Disclaimer
+This repository contains data that was obtained through web scraping from a publicly accessible website. The purpose of this project is purely educational and non-commercial. It is intended to explore data analysis, visualization, and machine learning techniques for academic learning and personal development.
+
+We do not claim ownership of any content scraped from the website, and no data has been used for redistribution, resale, or to infringe on intellectual property rights. All efforts have been made to ensure ethical use of publicly available information.
+
+If you are a representative of the original website and have any concerns, please feel free to contact me so the content can be reviewed or removed accordingly.
