@@ -1,14 +1,19 @@
-# Introduction
-## Data Cleaning After Web Scraping – Machine Learning & Data Analytics Category
+ # Data Cleaning After Web Scraping – Machine Learning & Data Analytics Category
 
-# 📢 Disclaimer
+## 📢 Disclaimer
 This repository contains data that was obtained through web scraping from a publicly accessible website. The purpose of this project is purely educational and non-commercial. It is intended to explore data analysis, visualization, and machine learning techniques for academic learning and personal development.
 
 We do not claim ownership of any content scraped from the website, and no data has been used for redistribution, resale, or to infringe on intellectual property rights. All efforts have been made to ensure ethical use of publicly available information.
 
 If you are a representative of the original website and have any concerns, please feel free to contact me so the content can be reviewed or removed accordingly.
 
-### 📌 This document summarizes the cleaning process applied to data scraped from web's results *Machine Learning* gigs. <br> The focus is on solving structural CSV issues caused by embedded commas in gig titles.
+---
+
+### 📌 This document summarizes the cleaning process applied to data scraped from web's results:</br> [*Machine Learning*](https://github.com/anverpy/scraping-and-data-analysis/blob/main/ML-gigs.csv) and [*Data Analytics*](https://github.com/anverpy/scraping-and-data-analysis/blob/main/DA-gigs.csv) gigs. <br> The focus is on solving structural CSV issues caused by embedded commas in gig titles.</br>
+
+### In the [og_DA_csv.zip](https://github.com/anverpy/scraping-and-data-analysis/blob/main/og_DA_csv.zip) file, you can find the raw Data Analytic's Gigs. </br>
+
+### I couldn't stay with Machine Learning's raw by technical mistake. </br> (I stop using shift + del 😅).
 
 ---
 
@@ -53,18 +58,18 @@ Expected fields for each gig:
 
 # 🔧 3. Script Summary
 
-### - **`title_extractor.py`**: Extracts just the title column from malformed rows.
-### - **`rid_bad_titles.py`**: Keeps only the last 6 fields, discarding corrupted titles.
+### - **[`title_extractor.py`](https://github.com/anverpy/scraping-and-data-analysis/blob/main/title_extractor.py)**: Extracts just the title column from malformed rows.
+### - **[`rid_bad_titles.py`](https://github.com/anverpy/scraping-and-data-analysis/blob/main/rid_bad_titles.py)**: Keeps only the last 6 fields, discarding corrupted titles.
 ### - At this point i erase all "," in Excel using `CTRL + B` but you can improve it by adding the function in any of these scripts.
-### - **`merge_titles_untitleds.py`**: Merges the cleaned titles back with the corrected data.
-### - **`merge_all.py`**: Concatenates two complete CSVs from separate scraping sessions cases. Be notice the csvs must to have the same headers names.
-### - **`fill_gaps.py`**: Gaps in rating/reviews/seller_level filled with unranked/unreviwed/unleveled.
+### - **[`merge_titles_untitleds.py`](https://github.com/anverpy/scraping-and-data-analysis/blob/main/merge_titles_untitleds.py)**: Merges the cleaned titles back with the corrected data.
+### - **[`merge_all.py`](https://github.com/anverpy/scraping-and-data-analysis/blob/main/merge_all.py)**: Concatenates two complete CSVs from separate scraping sessions cases. Be notice the csvs must to have the same headers names.
+### - **[`fill_gaps.py`](https://github.com/anverpy/scraping-and-data-analysis/blob/main/fill_gaps.py)**: Gaps in rating/reviews/seller_level filled with unranked/unreviwed/unleveled.
 ## Once made the data cleaning, we move forward to the next step.
 
 <br>
 
 # 📊 4. Visualitazion
-## In the repository you have both .ipynb files with code to understand the generation of graphs.
+## In the repository, you have the [`visualization.png`](https://github.com/anverpy/scraping-and-data-analysis/blob/main/visualization.png) file, which contains the final renderings of the visualizations.<br> Feel free to download the file and analyze it on your own or according to your needs.
 
 <br>
 
