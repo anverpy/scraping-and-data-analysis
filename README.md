@@ -70,7 +70,7 @@ Expected fields for each gig:
 <br>
 
 # 📊 4. Visualitazion
-## In the repository, you have the [`visualization.png`](https://github.com/anverpy/scraping-and-data-analysis/blob/main/visualization.png) file, which contains the final renderings of the visualizations.<br> Feel free to download the file and analyze it on your own or according to your needs.
+## In the repository, you have the final visual report on [PNG](https://github.com/anverpy/scraping-and-data-analysis/blob/main/visualization.png) and [PDF](https://github.com/anverpy/scraping-and-data-analysis/blob/main/visualization.pdf).<br> Feel free to take a look or download the file and analyze it on your own or according to your needs.
 
 <br>
 
