@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/6wIQDeI.png" alt="Data Analytics Banner" width="85%"/>
+  <img src="machine-learning/visualizations/ML_price_by_level.png" alt="ML Price by Level" width="85%"/>
 </p>
 
 <p align="center">
